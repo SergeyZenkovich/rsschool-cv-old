@@ -8,8 +8,7 @@
 * LinkedIn - https://www.linkedin.com/in/sergey-zenkovich-2a0a72183
 
 ## Summary:
- I am reseacher in GIS and remote sensing areas. In 2019 I graduated from the University(BSU - geography faculty - GIS specialist). Now I am working with spatial data, analyzing space images, writing some scripts for GIS program environment(Python). For me it is interesting to try out in FrontEnd. I have some experience in FrontEnd (completed courses: “FrontEnd start” in TeachMeSkills, “ServiceNow” in EPAM; try out: “RSSchool-2019(3)”). My goal is to improve my skills in FrontEnd and interconnect my knowledges of GIS and spatial data analyzing and FrontEnd in my future job.<br/> 
-**Goal** - Work as a Front-End developer in a big product company. <br/>
+ I am researcher in GIS and remote sensing areas. In 2019 I graduated from the University(BSU - geography faculty - GIS specialist). Now I am working with spatial data, analyzing space images, writing some scripts for GIS program environment(Python). For me it is interesting to try out in FrontEnd. I have some experience in FrontEnd (completed courses: “FrontEnd start” in TeachMeSkills, “ServiceNow” in EPAM; tried: “RSSchool-2019(3)” ). My goal is to improve my skills in FrontEnd and interconnect my knowledge on GIS and spatial data analyzing and FrontEnd in my future job.<br/> 
 **Wishes:**
  * Have strong knowledge in different frameworks.
  * Work in future with AR and VR technologies.
