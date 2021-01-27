@@ -8,13 +8,13 @@
 * LinkedIn - https://www.linkedin.com/in/sergey-zenkovich-2a0a72183
 
 ## Summary:
- I am researcher in GIS and remote sensing areas. In 2019 I graduated from the University(BSU - geography faculty - GIS specialist). Now I am working with spatial data, analyzing space images, writing some scripts for GIS program environment(Python). For me it is interesting to try out in FrontEnd. I have some experience in FrontEnd (completed courses: “FrontEnd start” in TeachMeSkills, “ServiceNow” in EPAM; tried: “RSSchool-2019(3)” ). My goal is to improve my skills in FrontEnd and interconnect my knowledge on GIS and spatial data analyzing and FrontEnd in my future job.<br/> 
+ I am researcher in GIS and remote sensing areas. In 2019 I graduated from the University(BSU - geography faculty - GIS specialist). Now I am working with spatial data, analyzing space images, writing scripts for GIS software environment(Python). For me it's interesting to try out FrontEnd. I have some experience in FrontEnd (completed courses: “FrontEnd start” in TeachMeSkills, “ServiceNow” in EPAM; tried: “RSSchool-2019/2020” ). My goal is to improve my skills in FrontEnd and interconnect my knowledge on GIS and spatial data analyzing and FrontEnd in my future job.<br/> 
 **Wishes:**
- * Have strong knowledge in different frameworks.
+ * Improve hard skills.
  * Work in future with AR and VR technologies.
  * Try myself in web design. 
 
-## Skills:
+## Hard Skills:
 * HTML5 + semantic HTML
 * CSS + Sass + Less
 * ES 5 + ES next
@@ -23,7 +23,12 @@
 * Bootstrap
 * Git
 * Webpack
+* React
+* Redux
+* Material UI
 * Phyton 
+* SQL
+
 ## Code examples:
 ```Javascript
 	function swapHeadAndTail(arr) {
@@ -112,11 +117,51 @@
 	  mode: 'development'
 	};
 ```
+```Javascript
+import { useEffect, useState } from 'react';
+import './App.css';
+import InputToDo from './Components/InputToDo';
+import ListComponent from './Components/ToDoList';
+import db from './firebase';
+import firebase from 'firebase'
+
+function App() {
+
+  const [todos, setTodos] = useState([]);
+
+  useEffect(()=>{
+    db.collection('todos').orderBy('timestamp','desc').onSnapshot(snapshot=>{
+      setTodos(snapshot.docs.map(doc=> ({id:doc.id, todo: doc.data().todo})))
+    });
+  },[])
+
+  const addTodoTask = (task)=>{
+    db.collection('todos').add({
+      todo: task,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    });
+
+    setTodos((prev)=>{
+      return [...prev, task];
+    })
+  }
+  
+  return (
+    <div className="App">
+      <h1>ToDo App</h1>
+      <InputToDo addTodoTask = {addTodoTask}/>
+      <ListComponent tasks = {todos}/>
+    </div>
+  );
+}
+
+export default App;
+```
 ## Experience:
  No working experience (only self coding and courses projects).
 ## Education:
 * Online courses and Tutorials (HTML Academy, Codeacademy, The Modern JavaScript Tutorial).
 * completed courses: “FrontEnd start” in TeachMeSkills, “ServiceNow” in EPAM;
-* tried: “RSSchool-2019(3)”; 
+* tried: “RSSchool-2019/2020”; 
 ## English:
- **A2 level** (have certification of "Ispeek" language school) Keep learning.
+ **B1 level** (have certification of "Ispeek" language school) Keep learning.
